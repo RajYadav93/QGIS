@@ -18,7 +18,6 @@ class QGIS_PlugDialog(QtWidgets.QDialog, FORM_CLASS):
         # http://qt-project.org/doc/qt-4.8/designer-using-a-ui-file.html
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
-        self.pushP1.clicked.connect(self.print_hello_word)
 
         self.error_label = QLabel()  # Assuming there's a QLabel widget for error messages
 
@@ -88,9 +87,6 @@ class QGIS_PlugDialog(QtWidgets.QDialog, FORM_CLASS):
     def display_error_message(self, message):
         # Display error message to the user (e.g., in a label)
         self.error_label.setText(message)
-
-    def print_hello_word(self):
-        print("hello word")
 
     def close_database_connection(self):
         # Close cursor and connection to the database
